@@ -4,7 +4,7 @@ int check_cycle(listint_t *list)
 {
 	if (list == NULL || list->next == NULL)
 	{
-		return 1;
+		return 0;
 	}
 	listint_t *buffer = list;
 	listint_t *fastbuffer = list;
@@ -16,9 +16,9 @@ int check_cycle(listint_t *list)
 
 		if (buffer == fastbuffer)
 		{
-			return 0;
+			return 1;
 		}
 	}
 
-	return 1;
+	return 0;
 }

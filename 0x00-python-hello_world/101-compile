@@ -1,0 +1,7 @@
+#!/bin/bash
+import os
+import compileall
+
+pyfile = os.getenv('PYFILE')
+compileall.compile_file(pyfile, force=True)
+pycfile = os.path.splitext(pyfile)[0] + ".pyc"

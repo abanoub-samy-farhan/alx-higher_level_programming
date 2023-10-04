@@ -12,13 +12,13 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		return (NULL);
 	}
+	new->n = number;
 	if (!(*head))
 	{
-		free(new);
-		return (NULL);
+		new->next = NULL;
+		(*head) = new;
+		return (new);
 	}
-
-	new->n = number;
 	if (buffer->n > new->n)
 	{
 		new->next = buffer;

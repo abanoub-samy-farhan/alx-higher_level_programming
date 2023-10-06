@@ -15,8 +15,8 @@ if __name__ == "__main__":
         return x / y
 
     operator = {
-            '*' : mul,
-            '+' : add,
+            '*': mul,
+            '+': add,
             '-': sub,
             '/': div
             }
@@ -30,6 +30,8 @@ if __name__ == "__main__":
             exit(1)
         else:
             func = operator[sys.argv[2]]
+            num1 = int(sys.argv[1])
+            num2 = int(sys.argv[3])
             result = func(int(sys.argv[1]), int(sys.argv[3]))
-            print("{} {} {} = {}".format(int(sys.argv[1]), sys.argv[2],int(sys.argv[3]), result))
+            print("{} {} {} = {}".format(int(num1, sys.argv[2], num2, result)))
     exit(0)

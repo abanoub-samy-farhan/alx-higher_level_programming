@@ -31,5 +31,5 @@ if __name__ == "__main__":
         else:
             func = operator[sys.argv[2]]
             result = func(int(sys.argv[1]), int(sys.argv[3]))
-            print("{} + {} = {}".format(int(sys.argv[1]), int(sys.argv[3]), result))
+            print("{} {} {} = {}".format(int(sys.argv[1]), sys.argv[2],int(sys.argv[3]), result))
     exit(0)

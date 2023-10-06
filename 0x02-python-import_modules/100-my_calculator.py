@@ -33,5 +33,5 @@ if __name__ == "__main__":
             num1 = int(sys.argv[1])
             num2 = int(sys.argv[3])
             result = func(int(sys.argv[1]), int(sys.argv[3]))
-            print("{} {} {} = {}".format(int(num1, sys.argv[2], num2, result)))
+            print("{} {} {} = {}".format(num1, sys.argv[2], num2, result))
     exit(0)

@@ -7,4 +7,3 @@ def square_matrix_simple(matrix=[]):
             sub_list.append(i * i)
         new_list.append(sub_list)
     return new_list
-

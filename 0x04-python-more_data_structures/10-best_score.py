@@ -3,5 +3,6 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
     else:
-        list_of_values = list(a_dictionary.values())
-        return max(list_of_values)
+        values = list(a_dictionary.values())
+        keys = list(a_dictionary.keys())
+        return keys[values.index(max(values))]

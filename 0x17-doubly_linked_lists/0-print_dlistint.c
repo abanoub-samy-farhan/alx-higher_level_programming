@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ * print_dlistint - function to print doubly linked lists
+ * @h: list
+ * Return: the lenght of the list
  *
  *
  *

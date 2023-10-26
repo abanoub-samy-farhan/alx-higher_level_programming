@@ -7,10 +7,11 @@ class Square:
         """Constructors
         Args:
             size: lenght of the square.
+            position: the position of the printed
         """
         self.size = size
-        self.position = position
-    
+        self.__position = position
+ 
     @property
     def size(self):
         """Size of the square
@@ -18,6 +19,11 @@ class Square:
             the size of the square
         """
         return self.__size
+
+    @property
+    def position(self):
+        """Position retraival for assignemnet"""
+        return self.__positiion
 
     @size.setter
     def size(self, value):
@@ -30,11 +36,6 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    @property
-    def position(self):
-        """Position retraival for assignemnet"""
-        return self.__positiion
 
     @position.setter
     def positon(self, value):
@@ -59,9 +60,8 @@ class Square:
 
             [print("") for empty in range(self.__position[1])]
             for j in range(self.__size):
-                [print(" ") for space in range(self.__position[0])]
+                [print(" ", end='') for space in range(self.__position[0])]
                 [print("#", end='') for hasx in range(self.__size)]
                 [print()]
         else:
             print()
-

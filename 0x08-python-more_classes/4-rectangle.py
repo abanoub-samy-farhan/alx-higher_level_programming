@@ -57,6 +57,6 @@ class Rectangle:
                                 for j in range(self.__height))
         return string
 
-    def __repr(self):
+    def __repr__(self):
         """returning a value of a string of the rectangle"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)

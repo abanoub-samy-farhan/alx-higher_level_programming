@@ -49,11 +49,11 @@ class Rectangle:
 
     def area(self):
         """returns the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""
-        if self.__height == 0 or self.__width == 0:
+        if self.height == 0 or self.width == 0:
             return 0
         return 2 * (self.__height + self.__width)
 
@@ -61,7 +61,7 @@ class Rectangle:
         """returning the visual shape of the rectangle using #"""
         if not self.__width or not self.__height:
             return ""
-        return ((str(self.print_symbol) * self.__width + "\n") * self.__height)[:-1]
+        return ((str(self.print_symbol) * self.width + "\n") * self.height)[:-1]
 
     def __repr__(self):
         """returning a value of a string of the rectangle"""
@@ -89,6 +89,7 @@ class Rectangle:
             return rect_1
         return rect_2
 
+    @classmethod
     def square(cls, size=0):
         """return an Rectangle instance with equal size"""
         return cls(size, size)

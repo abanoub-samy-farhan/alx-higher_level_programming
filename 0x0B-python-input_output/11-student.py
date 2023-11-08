@@ -20,11 +20,11 @@ class Student:
         my_dict = dict()
         for key, value in self.__dict__.items():
             if key in attr:
-                my_dict{key} = value
+                my_dict[key] = value
         return my_dict
 
     def reload_from_json(self, json):
         """returning a very specific code that make something"""
         for key, value in json.items():
             if key in self.__dict__:
-                self.__dict__{key} = value
+                self.__dict__[key] = value

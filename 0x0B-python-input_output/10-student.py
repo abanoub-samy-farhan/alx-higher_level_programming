@@ -9,16 +9,16 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, atrs=None):
         """returns json dict"""
         try:
-            for attr in attrs:
+            for attr in atrs:
                 if type(attr) is not str:
                     return self.__dict__
         except Exception:
             return self.__dict__
         my_dict = dict()
         for key, value in self.__dict__.items():
-            if key in attr:
+            if key in atrs:
                 my_dict[key] = value
         return my_dict

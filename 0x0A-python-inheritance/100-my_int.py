@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """python is a good language"""
 
+
 class MyInt(int):
     """int but has some cool stuff"""
 

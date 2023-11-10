@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""inherits the shape and advance the project"""
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+'''Module for Rectangle class.'''
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
-    """Rectangle class"""
+    '''A subclass representing a rectangle.'''
     def __init__(self, width, height):
-        """defining the variables of the rectangle"""
-        integer_validator("height", height)
-        integer_validator("width", width)
-        self.__height = height
+        '''Constructor of the class with privte instances.'''
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
+        self.__height = height

@@ -71,3 +71,6 @@ class Rectangle(Base):
         """returning the shape of the function"""
         string = ("#" * self.__width + '\n') * self.__height
         print(string, end='')
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)

@@ -77,3 +77,14 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
                                                        self.y, self.width,
                                                        self.height)
+
+    def update(self, *args):
+        """Updating the constructors"""
+        list_k = {"id": self.id, "width": self.width,
+                  "x": self.x, "y": self.y, "height": self.height}
+        list_t = [self.id, self.width, self.height, self.x, self.y]
+        if args:
+            i = 0
+            for arg in args:
+                list_t[i] = arg
+                i += 1

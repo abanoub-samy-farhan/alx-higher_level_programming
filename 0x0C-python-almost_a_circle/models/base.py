@@ -2,6 +2,7 @@
 """making a good progress in the upcomming stage"""
 from json import dumps, loads
 
+
 class Base:
     """Class tha hava a base for everything"""
 
@@ -36,7 +37,8 @@ class Base:
         '''Saves jsonified object to file.'''
         if list_objs is not None:
             list_objs = [o.to_dictionary() for o in list_objs]
-        with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as file:
+        with open("{}.json".format(cls.__name__), "w",
+                  encoding="utf-8") as file:
             file.write(cls.to_json_string(list_objs))
 
     @classmethod
@@ -61,5 +63,5 @@ class Base:
         if not path.isfile(file):
             return []
         with open(file, "r", encoding="utf-8") as file_s:
-            return [cls.create(**d) for d in cls.from_json_string(file_s.read())]
-
+            return [cls.create(**d)
+                    for d in cls.from_json_string(file_s.read())]

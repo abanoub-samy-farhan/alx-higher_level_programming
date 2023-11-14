@@ -68,5 +68,6 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
+        """returning the shape of the function"""
         string = ("#" * self.__width + '\n') * self.__height
         print(string, end='')

@@ -78,13 +78,42 @@ class Rectangle(Base):
                                                        self.y, self.width,
                                                        self.height)
 
-    def update(self, *args):
-        """Updating the constructors"""
-        list_k = {"id": self.id, "width": self.width,
-                  "x": self.x, "y": self.y, "height": self.height}
-        list_t = [self.id, self.width, self.height, self.x, self.y]
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Internal method that updates instance attributes via */**args.'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        '''Updates instance attributes'''
+        # print(args, kwargs)
         if args:
-            i = 0
-            for arg in args:
-                list_t[i] = arg
-                i += 1
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+
+r1 = Rectangle(10, 10, 10, 10)
+print(r1)
+
+r1.update(89)
+print(r1)
+
+r1.update(89, 2)
+print(r1)
+
+r1.update(89, 2, 3)
+print(r1)
+
+r1.update(89, 2, 3, 4)
+print(r1)
+
+r1.update(89, 2, 3, 4, 5)
+print(r1)

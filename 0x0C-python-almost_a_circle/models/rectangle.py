@@ -62,3 +62,7 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
         elif not directions and value <= 0:
             raise ValueError("{} must be > 0".format(name))
+
+    def area(self):
+        """returning the area of the rectangle"""
+        return self.__height * self.__width

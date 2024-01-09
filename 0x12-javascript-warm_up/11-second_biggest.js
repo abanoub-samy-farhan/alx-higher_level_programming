@@ -1,13 +1,8 @@
 #!/usr/bin/node
-
-const arguments = process.argv.slice(2).map(Number); // Convert arguments to numbers
-
-if (arguments.length === 0) {
-  console.log(0);
-} else if (arguments.length === 1) {
-  console.log(0);
+if (process.argv.length <= 3) {
+  console.log('0');
 } else {
-  const uniqueList = [...new Set(arguments)];
-  const sortedList = uniqueList.sort((a, b) => b - a);
-  console.log(sortedList[1]);
+  const arr = process.argv.slice(2).map(Number);
+  const sorted = arr.sort((a, b) => b - a)[1];
+  console.log(sorted);
 }

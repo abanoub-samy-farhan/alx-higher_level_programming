@@ -2,6 +2,7 @@
 """
 Models used in the task
 """
+
 from sys import argv
 import MySQLdb
 

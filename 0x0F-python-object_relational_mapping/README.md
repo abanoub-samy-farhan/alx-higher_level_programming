@@ -1,1 +1,1 @@
-###0x0F-python-object_relational_mapping
+This is readme file of the new project

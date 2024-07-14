@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# making the file urllib first time to use
+"""
+Module documented
+:"""
 from urllib import request
 from sys import argv
 

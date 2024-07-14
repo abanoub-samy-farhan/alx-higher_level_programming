@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
 Module documented
-:"""
-from urllib import request
+"""
+import urllib
 from sys import argv
 
-url = argv[1]
-with request.urlopen(url) as resp:
-    print(resp.getheader("X-Request-Id"))
+if __name__ == "__main__":
+    url = argv[1]
+    with urllib.request.urlopen(url) as response:
+        html = response.getheader("X-Request-Id")
+        print(f"{html}")

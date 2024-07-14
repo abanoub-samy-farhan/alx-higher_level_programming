@@ -2,10 +2,11 @@
 """
 Module documented
 """
-import urllib
+from urllib import request
 from sys import argv
 
-url = argv[1]
-with urllib.request.urlopen(url) as response:
-    html = response.getheader("X-Request-Id")
-    print(f"{html}")
+if __name__ == '__main__':    
+    url = argv[1]
+    with request.urlopen(url) as response:
+        html = response.getheader("X-Request-Id")
+        print(f"{html}")

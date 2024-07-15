@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """Module Well documented"""
 import requests
-from sys import argv
 
 if __name__ == "__main__":
-    url = argv[1]
-    resp = requests.get(url)
+    resp = requests.get("https://alx-intranet.hbtn.io/status")
     content = resp.content
     content = content.decode("utf-8")
     print("Body response:")

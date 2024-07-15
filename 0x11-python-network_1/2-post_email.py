@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# making the file for the post request
+"""Module documented"""
 from urllib import request, parse
 from sys import argv
 

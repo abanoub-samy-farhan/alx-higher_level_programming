@@ -4,6 +4,7 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
+    """this is the main function of the file"""
     url = "http://0.0.0.0:5000/search_user"
     c = {"q": ""}
     if len(argv) > 1:
